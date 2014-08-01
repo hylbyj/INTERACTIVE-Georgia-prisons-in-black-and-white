@@ -1,0 +1,1214 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="highcharts.js"></script>
+<script src="http://code.highcharts.com/modules/exporting.js"></script>
+
+ 
+
+
+<script type = "text/javascript">
+var year = 2013;
+var chart;
+
+$(function () {
+        $('#container').highcharts({
+            chart: {
+                style:{
+                    fontFamily:'serif'
+                }
+            },
+            title: {
+                text: 'Cocaine Reports vs. African American Commitments- 2002-2013',
+                x: -20 //center
+            },
+            subtitle: {
+                text: null,
+                x: -20
+            },
+            xAxis: {
+                categories: ['2002', '2003', '2004', '2005', '2006', '2007',
+                    '2008', '2009', '2010', '2011', '2012', '2013']
+            },
+            yAxis: {
+                plotLines: [{
+                    value: 0,
+                    width: 1,
+                    color: '#808080'
+                }]
+            },
+            tooltip: {
+                crosshairs: true,
+                shared: true
+            },
+            legend: {
+                layout: 'vertical',
+                align: 'right',
+                verticalAlign: 'middle',
+                borderWidth: 0
+            },
+            plotOptions: {
+                series: {
+                cursor: 'pointer',
+                point:{
+                events: {
+                    click: function() {
+                    year = this.category;
+                    console.log("year" + this.category);
+
+                    if (year == 2012){
+                    chart.series[0].setData(
+                    	[
+                    ['White',   17264],
+                    ['Black',   33789],
+                    {
+                        name: 'Other',
+                        y: 47,
+                        sliced: true,
+                        selected: true
+                    },
+                    ['Asian',    150],
+                    ['Unknown',  3],
+                    ['Hipanic',   2396]
+                    ['Native Amercian',28]
+                ]); chart.series[1].setData(
+                    	[
+                    ['White',   2056],
+                    ['Black',   1738],
+                    {
+                        name: 'Other',
+                        y: 10,
+                        sliced: true,
+                        selected: true
+                    },
+                    ['Asian',    5],
+                    ['Unknown',  0],
+                    ['Hipanic',   79]
+                    ['Native Amercian',5]])}
+
+                    if(year == 2011){
+                    chart.series[0].setData(
+                    	[
+                    ['White',   15868],
+                    ['Black',   31454],
+                    {
+                        name: 'Other',
+                        y: 49,
+                        sliced: true,
+                        selected: true
+                    },
+                    ['Asian',    124],
+                    ['Unknown',  0],
+                    ['Hipanic',   2229]
+                    ['Native Amercian',27]
+                ]); chart.series[1].setData(
+                    	[
+                    ['White',   1884],
+                    ['Black',   1615],
+                    {
+                        name: 'Other',
+                        y: 6,
+                        sliced: true,
+                        selected: true
+                    },
+                    ['Asian',    3],
+                    ['Unknown',  0],
+                    ['Hipanic',   77]
+                    ['Native Amercian',5]])}
+
+                    if(year == 2010){
+                    chart.series[0].setData(
+                    	[
+                    ['White',   15246],
+                    ['Black',   31115],
+                    {
+                        name: 'Other',
+                        y: 59,
+                        sliced: true,
+                        selected: true
+                    },
+                    ['Asian',    102],
+                    ['Unknown',  2],
+                    ['Hipanic',   2015]
+                    ['Native Amercian',31]
+                ]); chart.series[1].setData(
+                    	[
+                    ['White',   1909],
+                    ['Black',   1753],
+                    {
+                        name: 'Other',
+                        y: 3,
+                        sliced: true,
+                        selected: true
+                    },
+                    ['Asian',    4],
+                    ['Unknown',  0],
+                    ['Hipanic',   50]
+                    ['Native Amercian',2]])}  
+                    if(year == 2009){
+                    chart.series[0].setData(
+                    	[
+                    ['White',   18111],
+                    ['Black',   31803],
+                    {
+                        name: 'Asian',
+                        y: 67,
+                        sliced: true,
+                        selected: true
+                    },
+                    ['Indian',    44],
+                ]); chart.series[1].setData(
+                    	[
+                    ['White',   1939],
+                    ['Black',   1754],
+                    {
+                        name: 'Asian',
+                        y: 3,
+                        sliced: true,
+                        selected: true
+                    },
+                    ['Indian',    8]
+                ])}
+                    if(year == 2008){
+                    chart.series[0].setData(
+                    	[
+                    ['White',   18586],
+                    ['Black',   31510],
+                    {
+                        name: 'Asian',
+                        y: 63,
+                        sliced: true,
+                        selected: true
+                    },
+                    ['Indian',    58],
+                ]); chart.series[1].setData(
+                    	[
+                    ['White',   1937],
+                    ['Black',   1604],
+                    {
+                        name: 'Asian',
+                        y: 2,
+                        sliced: true,
+                        selected: true
+                    },
+                    ['Indian',    5]
+                ])}
+                    if(year == 2007){
+                    chart.series[0].setData(
+                    	[
+                    ['White',   18479],
+                    ['Black',   30894],
+                    {
+                        name: 'Asian',
+                        y: 54,
+                        sliced: true,
+                        selected: true
+                    },
+                    ['Indian',    42],
+                ]); chart.series[1].setData(
+                    	[
+                    ['White',   1877],
+                    ['Black',   1635],
+                    {
+                        name: 'Asian',
+                        y: 2,
+                        sliced: true,
+                        selected: true
+                    },
+                    ['Indian',    3]
+                ])}
+                    if(year == 2006){
+                    chart.series[0].setData(
+                    	[
+                    ['White',   18126],
+                    ['Black',   30675],
+                    {
+                        name: 'Asian',
+                        y: 59,
+                        sliced: true,
+                        selected: true
+                    },
+                    ['Indian',    44],
+                ]); chart.series[1].setData(
+                    	[
+                    ['White',   1845],
+                    ['Black',   1644],
+                    {
+                        name: 'Asian',
+                        y: 2,
+                        sliced: true,
+                        selected: true
+                    },
+                    ['Indian',    3]
+                ])}
+                    if(year == 2005){
+                    chart.series[0].setData(
+                    	[
+                    ['White',   16163],
+                    ['Non-White',   28460],
+                ]);  chart.series[1].setData(
+                    	[
+                    ['White',   1292],
+                    ['Non-White',   1389]
+                ])}
+                    if(year == 2004){
+                    chart.series[0].setData(
+                    	[
+                    ['White',   16183],
+                    ['Non-White',   29324],
+                ]);  chart.series[1].setData(
+                    	[
+                    ['White',   1501],
+                    ['Non-White',   1615]
+                ])}               
+                    if(year == 2003){
+                    chart.series[0].setData(
+                    	[
+                    ['White',   15453],
+                    ['Non-White',   28613],
+                ]); chart.series[1].setData(
+                    	[
+                    ['White',   1458],
+                    ['Non-White',   1651]
+                ])}     
+                    if(year == 2002){
+                    chart.series[0].setData(
+                    	[
+                    ['White',   14712],
+                    ['Non-White',   28921],
+                ]); chart.series[1].setData(
+                    	[
+                    ['White',   1330],
+                    ['Non-White',   1676]
+                ])}                                            	
+                    }
+                  }
+               }
+           }
+            },
+
+            series: [{
+                name: 'Cocaine',
+                data: [20628,16148,15825,18846,20377,19598,17644,13147,10281,9806,9185,8385]
+            }, {
+                name: 'Methamphetamine',
+                data: [4680,5475,7259,9478,10563,7220,4463,4732,4550,5232,6101,8026]
+            }]
+        });
+    });
+
+$(function () {
+        $('#container2').highcharts({
+            chart: {
+                style:{
+                    fontFamily:'serif'
+                }
+            },
+            title: {
+                text: 'Cocaine and Methamphetamine Reports - FY2002-2013',
+                x: -20 //center
+            },
+            subtitle: {
+                text: 'Source: GBI',
+                x: -20
+            },
+            xAxis: {
+                categories: ['2002', '2003', '2004', '2005', '2006', '2007',
+                    '2008', '2009', '2010', '2011', '2012', '2013']
+            },
+            yAxis: {
+                plotLines: [{
+                    value: 0,
+                    width: 1,
+                    color: '#808080'
+                }]
+            },
+            tooltip: {
+                crosshairs: true,
+                shared: true
+            },
+            legend: {
+                layout: 'vertical',
+                align: 'right',
+                verticalAlign: 'middle',
+                borderWidth: 0
+            },
+
+            series: [{
+                name: 'Cocaine',
+                data: [10858,11853,11856,11361,12502,12411,12955,13366,12757,12151,11209,10660]
+            }, {
+                name: 'Methamphetamine',
+                data: [6442,6870,7272,7571,7903,7770,7122,7291,7476,7373,7064,7106]
+            }]
+        });
+    });
+
+$(function () {
+        $('#container3').highcharts({
+            chart: {
+                style:{
+                    fontFamily:'serif'
+                }
+            },
+
+            title: {
+                text: 'Cocaine vs. African American Commitments',
+                x: -10,
+                align:"left" //center
+            },
+            subtitle: {
+                text: null,
+                x: -20
+            },
+            xAxis: {
+                categories: ['2002', '2003', '2004', '2005', '2006', '2007',
+                    '2008', '2009', '2010', '2011', '2012', '2013'],
+                plotBands: {
+                color: 'rgba(68, 170, 213, .2)', // Color value
+                from: '7', // Start of the plot band
+                to: '12' // End of the plot band
+                },    
+            },
+            yAxis: [{
+
+                labels: {
+                    align: 'right',
+                    x: -3,
+                style: {
+                    color: Highcharts.getOptions().colors[0]
+                }
+                },
+
+                
+                lineWidth: 2,
+
+                title: {
+                    text: 'Positive drug test'
+                },
+            }, {
+                labels: {
+                    align: 'right',
+                    x: -3,
+                    
+                },
+                title: {
+                    text: 'Prison commitment',
+                },
+                
+                
+                offset: 0,
+                lineWidth: 2,
+                opposite: true
+            }],
+            tooltip: {
+                crosshairs: true,
+                shared: true
+            },
+            legend: {
+                layout: 'vertical',
+                align: 'right',
+                
+                verticalAlign: 'middle',
+                
+                
+                backgroundColor: '#FFFFFF'
+            },
+                        plotOptions: {
+                series: {
+                cursor: 'pointer',
+                point:{
+                events: {
+                    click: function() {
+                    year = this.category;
+                    console.log("year" + this.category);
+
+                    if (year == 2012){
+                    chart.series[0].setData(
+                        [
+                    ['White',   17264],
+                    ['Black',   33789],
+                    {
+                        name: 'Other',
+                        y: 47,
+                        sliced: true,
+                        selected: true
+                    },
+                    ['Asian',    150],
+                    ['Unknown',  3],
+                    ['Hipanic',   2396]
+                    ['Native Amercian',28]
+                ]); chart.series[1].setData(
+                        [
+                    ['White',   2056],
+                    ['Black',   1738],
+                    {
+                        name: 'Other',
+                        y: 10,
+                        sliced: true,
+                        selected: true
+                    },
+                    ['Asian',    5],
+                    ['Unknown',  0],
+                    ['Hipanic',   79]
+                    ['Native Amercian',5]])}
+
+                    if(year == 2011){
+                    chart.series[0].setData(
+                        [
+                    ['White',   15868],
+                    ['Black',   31454],
+                    {
+                        name: 'Other',
+                        y: 49,
+                        sliced: true,
+                        selected: true
+                    },
+                    ['Asian',    124],
+                    ['Unknown',  0],
+                    ['Hipanic',   2229]
+                    ['Native Amercian',27]
+                ]); chart.series[1].setData(
+                        [
+                    ['White',   1884],
+                    ['Black',   1615],
+                    {
+                        name: 'Other',
+                        y: 6,
+                        sliced: true,
+                        selected: true
+                    },
+                    ['Asian',    3],
+                    ['Unknown',  0],
+                    ['Hipanic',   77]
+                    ['Native Amercian',5]])}
+
+                    if(year == 2010){
+                    chart.series[0].setData(
+                        [
+                    ['White',   15246],
+                    ['Black',   31115],
+                    {
+                        name: 'Other',
+                        y: 59,
+                        sliced: true,
+                        selected: true
+                    },
+                    ['Asian',    102],
+                    ['Unknown',  2],
+                    ['Hipanic',   2015]
+                    ['Native Amercian',31]
+                ]); chart.series[1].setData(
+                        [
+                    ['White',   1909],
+                    ['Black',   1753],
+                    {
+                        name: 'Other',
+                        y: 3,
+                        sliced: true,
+                        selected: true
+                    },
+                    ['Asian',    4],
+                    ['Unknown',  0],
+                    ['Hipanic',   50]
+                    ['Native Amercian',2]])}  
+                    if(year == 2009){
+                    chart.series[0].setData(
+                        [
+                    ['White',   18111],
+                    ['Black',   31803],
+                    {
+                        name: 'Asian',
+                        y: 67,
+                        sliced: true,
+                        selected: true
+                    },
+                    ['Indian',    44],
+                ]); chart.series[1].setData(
+                        [
+                    ['White',   1939],
+                    ['Black',   1754],
+                    {
+                        name: 'Asian',
+                        y: 3,
+                        sliced: true,
+                        selected: true
+                    },
+                    ['Indian',    8]
+                ])}
+                    if(year == 2008){
+                    chart.series[0].setData(
+                        [
+                    ['White',   18586],
+                    ['Black',   31510],
+                    {
+                        name: 'Asian',
+                        y: 63,
+                        sliced: true,
+                        selected: true
+                    },
+                    ['Indian',    58],
+                ]); chart.series[1].setData(
+                        [
+                    ['White',   1937],
+                    ['Black',   1604],
+                    {
+                        name: 'Asian',
+                        y: 2,
+                        sliced: true,
+                        selected: true
+                    },
+                    ['Indian',    5]
+                ])}
+                    if(year == 2007){
+                    chart.series[0].setData(
+                        [
+                    ['White',   18479],
+                    ['Black',   30894],
+                    {
+                        name: 'Asian',
+                        y: 54,
+                        sliced: true,
+                        selected: true
+                    },
+                    ['Indian',    42],
+                ]); chart.series[1].setData(
+                        [
+                    ['White',   1877],
+                    ['Black',   1635],
+                    {
+                        name: 'Asian',
+                        y: 2,
+                        sliced: true,
+                        selected: true
+                    },
+                    ['Indian',    3]
+                ])}
+                    if(year == 2006){
+                    chart.series[0].setData(
+                        [
+                    ['White',   18126],
+                    ['Black',   30675],
+                    {
+                        name: 'Asian',
+                        y: 59,
+                        sliced: true,
+                        selected: true
+                    },
+                    ['Indian',    44],
+                ]); chart.series[1].setData(
+                        [
+                    ['White',   1845],
+                    ['Black',   1644],
+                    {
+                        name: 'Asian',
+                        y: 2,
+                        sliced: true,
+                        selected: true
+                    },
+                    ['Indian',    3]
+                ])}
+                    if(year == 2005){
+                    chart.series[0].setData(
+                        [
+                    ['White',   16163],
+                    ['Non-White',   28460],
+                ]);  chart.series[1].setData(
+                        [
+                    ['White',   1292],
+                    ['Non-White',   1389]
+                ])}
+                    if(year == 2004){
+                    chart.series[0].setData(
+                        [
+                    ['White',   16183],
+                    ['Non-White',   29324],
+                ]);  chart.series[1].setData(
+                        [
+                    ['White',   1501],
+                    ['Non-White',   1615]
+                ])}               
+                    if(year == 2003){
+                    chart.series[0].setData(
+                        [
+                    ['White',   15453],
+                    ['Non-White',   28613],
+                ]); chart.series[1].setData(
+                        [
+                    ['White',   1458],
+                    ['Non-White',   1651]
+                ])}     
+                    if(year == 2002){
+                    chart.series[0].setData(
+                        [
+                    ['White',   14712],
+                    ['Non-White',   28921],
+                ]); chart.series[1].setData(
+                        [
+                    ['White',   1330],
+                    ['Non-White',   1676]
+                ])}                                             
+                    }
+                  }
+               }
+           }
+            },
+
+            series: [{
+                name: 'Cocaine',
+                data: [20628,16148,15825,18846,20377,19598,17644,13147,10281,9806,9185,8385]
+            }, {
+                yAxis: 1,
+                name: 'African Amercian',
+                data: [10858,11853,11856,11361,12502,12411,12955,13366,12757,12151,11209,10660],
+                
+            }]
+        });
+    });
+
+
+
+$(function group1(year) {
+    
+    
+    $(document).ready(function () {
+    	
+    	// Build the chart
+    	chart = new Highcharts.Chart({
+      //$('#container1').highcharts({
+            chart: {
+            	renderTo: 'container1',
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+                style:{
+                    fontFamily:'serif'
+                }
+            },
+            title: {
+                text:'Inmate Statistical Profile'
+            },
+            labels:{
+            items: [{
+                html: 'Male',
+                style: {
+                    left: '50px',
+                    top: '20px',
+                    color: (Highcharts.theme && Highcharts.theme.textColor) || 'black'
+                }
+            },{
+                html: 'Female',
+                style: {
+                    left: '450px',
+                    top: '20px',
+                    color: (Highcharts.theme && Highcharts.theme.textColor) || 'black'
+					}
+            }]
+        },
+            tooltip: {
+        	    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: false
+                    },
+                    showInLegend: true
+                }
+            },
+            series: [{
+                type: 'pie',
+                name: 'Male',
+                data: [
+                    ['White',   16581],
+                    ['Black',   32407],
+                    {
+                        name: 'Other',
+                        y: 40,
+                        sliced: true,
+                        selected: true
+                    },
+                    ['Asian',    102],
+                    ['Unknown',  2],
+                    ['Hipanic',   2282]
+                    ['Native Amercian',28]
+                ],
+                center:[170,100]
+            },{
+                type: 'pie',
+                name: 'Female',
+                data: [
+                    ['White',   2041],
+                    ['Black',   1615],
+                    {
+                        name: 'Other',
+                        y: 9,
+                        sliced: true,
+                        selected: true
+                    },
+                    ['Asian',    11],
+                    ['Unknown',  0],
+                    ['Hipanic',   71],
+                    ['Native American',1]	
+                ],
+                center:[550,100],
+                showInLegend: false,
+            }]
+        });     
+    });
+    
+});
+
+$(function () {
+        $('#container4').highcharts({
+            chart: {
+                style:{
+                    fontFamily:'serif'
+                }
+            },
+                title: {
+                text: 'Methamphetamine vs. White Commitments',
+                x: -10, //center
+                align:'left'
+            },
+            subtitle: {
+                text: null,
+                x: -20
+            },
+            xAxis: {
+
+                categories: ['2002', '2003', '2004', '2005', '2006', '2007',
+                    '2008', '2009', '2010', '2011', '2012', '2013'],
+              plotBands: {
+                color: 'rgba(68, 170, 213, .2)', // Color value
+                from: '7', // Start of the plot band
+                to: '12' // End of the plot band
+                },
+
+            },
+            yAxis: [{
+                labels: {
+                    align: 'right',
+                    x: -3,
+                style: {
+                    color: Highcharts.getOptions().colors[0]
+                }                    
+
+                },
+
+                
+                lineWidth: 2,
+                title: {
+                    text: 'Positive drug test'
+                    
+                },
+            }, {
+                labels: {
+                    align: 'right',
+                    x: -3,
+                    
+                },
+                title: {
+                    text: 'Prison commitment'
+                },
+                
+                
+                offset: 0,
+                lineWidth: 2,
+                opposite: true
+            }],
+            tooltip: {
+                crosshairs: true,
+                shared: true
+            },
+            legend: {
+                layout: 'vertical',
+                align: 'right',
+                
+                verticalAlign: 'middle',
+                
+                
+                backgroundColor: '#FFFFFF'
+            },
+                        plotOptions: {
+                series: {
+                cursor: 'pointer',
+                point:{
+                events: {
+                    click: function() {
+                    year = this.category;
+                    console.log("year" + this.category);
+
+                    if (year == 2012){
+                    chart.series[0].setData(
+                        [
+                    ['White',   17264],
+                    ['Black',   33789],
+                    {
+                        name: 'Other',
+                        y: 47,
+                        sliced: true,
+                        selected: true
+                    },
+                    ['Asian',    150],
+                    ['Unknown',  3],
+                    ['Hipanic',   2396]
+                    ['Native Amercian',28]
+                ]); chart.series[1].setData(
+                        [
+                    ['White',   2056],
+                    ['Black',   1738],
+                    {
+                        name: 'Other',
+                        y: 10,
+                        sliced: true,
+                        selected: true
+                    },
+                    ['Asian',    5],
+                    ['Unknown',  0],
+                    ['Hipanic',   79]
+                    ['Native Amercian',5]])}
+
+                    if(year == 2011){
+                    chart.series[0].setData(
+                        [
+                    ['White',   15868],
+                    ['Black',   31454],
+                    {
+                        name: 'Other',
+                        y: 49,
+                        sliced: true,
+                        selected: true
+                    },
+                    ['Asian',    124],
+                    ['Unknown',  0],
+                    ['Hipanic',   2229]
+                    ['Native Amercian',27]
+                ]); chart.series[1].setData(
+                        [
+                    ['White',   1884],
+                    ['Black',   1615],
+                    {
+                        name: 'Other',
+                        y: 6,
+                        sliced: true,
+                        selected: true
+                    },
+                    ['Asian',    3],
+                    ['Unknown',  0],
+                    ['Hipanic',   77]
+                    ['Native Amercian',5]])}
+
+                    if(year == 2010){
+                    chart.series[0].setData(
+                        [
+                    ['White',   15246],
+                    ['Black',   31115],
+                    {
+                        name: 'Other',
+                        y: 59,
+                        sliced: true,
+                        selected: true
+                    },
+                    ['Asian',    102],
+                    ['Unknown',  2],
+                    ['Hipanic',   2015]
+                    ['Native Amercian',31]
+                ]); chart.series[1].setData(
+                        [
+                    ['White',   1909],
+                    ['Black',   1753],
+                    {
+                        name: 'Other',
+                        y: 3,
+                        sliced: true,
+                        selected: true
+                    },
+                    ['Asian',    4],
+                    ['Unknown',  0],
+                    ['Hipanic',   50]
+                    ['Native Amercian',2]])}  
+                    if(year == 2009){
+                    chart.series[0].setData(
+                        [
+                    ['White',   18111],
+                    ['Black',   31803],
+                    {
+                        name: 'Asian',
+                        y: 67,
+                        sliced: true,
+                        selected: true
+                    },
+                    ['Indian',    44],
+                ]); chart.series[1].setData(
+                        [
+                    ['White',   1939],
+                    ['Black',   1754],
+                    {
+                        name: 'Asian',
+                        y: 3,
+                        sliced: true,
+                        selected: true
+                    },
+                    ['Indian',    8]
+                ])}
+                    if(year == 2008){
+                    chart.series[0].setData(
+                        [
+                    ['White',   18586],
+                    ['Black',   31510],
+                    {
+                        name: 'Asian',
+                        y: 63,
+                        sliced: true,
+                        selected: true
+                    },
+                    ['Indian',    58],
+                ]); chart.series[1].setData(
+                        [
+                    ['White',   1937],
+                    ['Black',   1604],
+                    {
+                        name: 'Asian',
+                        y: 2,
+                        sliced: true,
+                        selected: true
+                    },
+                    ['Indian',    5]
+                ])}
+                    if(year == 2007){
+                    chart.series[0].setData(
+                        [
+                    ['White',   18479],
+                    ['Black',   30894],
+                    {
+                        name: 'Asian',
+                        y: 54,
+                        sliced: true,
+                        selected: true
+                    },
+                    ['Indian',    42],
+                ]); chart.series[1].setData(
+                        [
+                    ['White',   1877],
+                    ['Black',   1635],
+                    {
+                        name: 'Asian',
+                        y: 2,
+                        sliced: true,
+                        selected: true
+                    },
+                    ['Indian',    3]
+                ])}
+                    if(year == 2006){
+                    chart.series[0].setData(
+                        [
+                    ['White',   18126],
+                    ['Black',   30675],
+                    {
+                        name: 'Asian',
+                        y: 59,
+                        sliced: true,
+                        selected: true
+                    },
+                    ['Indian',    44],
+                ]); chart.series[1].setData(
+                        [
+                    ['White',   1845],
+                    ['Black',   1644],
+                    {
+                        name: 'Asian',
+                        y: 2,
+                        sliced: true,
+                        selected: true
+                    },
+                    ['Indian',    3]
+                ])}
+                    if(year == 2005){
+                    chart.series[0].setData(
+                        [
+                    ['White',   16163],
+                    ['Non-White',   28460],
+                ]);  chart.series[1].setData(
+                        [
+                    ['White',   1292],
+                    ['Non-White',   1389]
+                ])}
+                    if(year == 2004){
+                    chart.series[0].setData(
+                        [
+                    ['White',   16183],
+                    ['Non-White',   29324],
+                ]);  chart.series[1].setData(
+                        [
+                    ['White',   1501],
+                    ['Non-White',   1615]
+                ])}               
+                    if(year == 2003){
+                    chart.series[0].setData(
+                        [
+                    ['White',   15453],
+                    ['Non-White',   28613],
+                ]); chart.series[1].setData(
+                        [
+                    ['White',   1458],
+                    ['Non-White',   1651]
+                ])}     
+                    if(year == 2002){
+                    chart.series[0].setData(
+                        [
+                    ['White',   14712],
+                    ['Non-White',   28921],
+                ]); chart.series[1].setData(
+                        [
+                    ['White',   1330],
+                    ['Non-White',   1676]
+                ])}                                             
+                    }
+                  }
+               }
+           }
+            },
+
+            series: [{
+                name: 'Methamphetamine',
+                data: [4680,5475,7259,9478,10563,7220,4463,4732,4550,5232,6101,8026]
+            }, {
+                yAxis: 1,
+                name: 'White Amercian',
+                data: [6442,6870,7272,7571,7903,7770,7122,7291,7476,7373,7064,7106],
+                
+            }]
+        });
+    });
+   
+$(function () {
+        $('#container5').highcharts({
+
+
+            chart: {
+                type: 'areaspline',
+                 style:{
+                    fontFamily:'serif'
+                }
+            },
+            title: {
+                text: 'Commitments of Georgia prison inmates 2000 - 2013'
+            },
+            legend: {
+                layout: 'vertical',
+                align: 'left',
+                verticalAlign: 'top',
+                x: 150,
+                y: 100,
+                floating: true,
+                borderWidth: 1,
+                backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'
+            },
+            xAxis: {
+                categories: [
+                    '2000',
+                    '2001',
+                    '2002',
+                    '2003',
+                    '2004',
+                    '2005',
+                    '2006',
+                    '2007',
+                    '2008',
+                    '2009',
+                    '2010',
+                    '2011',
+                    '2012',
+                    '2013',
+                ],
+                plotBands: [{ // visualize the weekend
+                    from: 9,
+                    to: 13,
+                    color: 'rgba(68, 170, 213, .2)'
+                }]
+            },
+            yAxis: [{
+                title: {
+                    text: 'African American Female'
+                },
+                height: '18%',
+            },
+                {
+                   title: {
+                    text: 'African American Male' 
+                },
+                offset:0,
+                top: '25%',
+                height: '18%',
+            },
+                {
+                   title: {
+                    text: 'White Female' 
+                },
+                offset:0,
+                top: '50%',
+                height: '18%',
+            }, 
+            {
+                   title: {
+                    text: 'White Male' 
+                },
+                offset:0,
+                top: '75%',
+                height: '18%',
+            }            
+            ],
+            tooltip: {
+                shared: true,
+                valueSuffix: null
+            },
+            credits: {
+                enabled: false
+            },
+            plotOptions: {
+                areaspline: {
+                    fillOpacity: 0.5
+                }
+            },
+            series: [{
+                name: 'African American Female',
+                data: [1094,1019,1007,1063,1045,925,999,981,1041,1063,958,871,769,706]
+            }, {
+                yAxis: 1,
+                name: 'African American Male',
+                data: [10276,10415,9850,10790,10811,10436,11503,11430,11914,12302,11798,11280,10440,9940]
+            },{
+                yAxis: 2,
+                name: 'African American Male',
+                data: [811,830,876,1078,1076,1164,1228,1323,1165,1205,1214,1111,1034,1114]
+            },{
+                yAxis: 3,
+                name: 'African American Male',
+                data: [5238,5349,5565,5792,6196,6406,6675,6447,5957,6086,6262,6262,6026,5986]
+            },
+            ]
+        });
+    });
+    
+    
+
+
+
+</script>
+</head>
+<body>
+<h1 class="title" style = "text-align:center" >Drug test results* vs. Georgia prison commitments</h1>
+
+<div id="container3" style="width: 800px; height: 300px; margin: 0 auto"></div>
+<div id="container4" style="width: 800px; height: 300px; margin: 0 auto"></div>
+
+
+<h3>Drug test results*:They are the number of evidence items that we tested that were positive for either drug.  It’s going to be pretty close to the number of reports we issued for each of those drugs each year. </h3>
+
+</body>
+
+</html>

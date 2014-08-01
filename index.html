@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+  	<meta charset="UTF-8">
+  	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  	<title>
+  		The Prison Data Viz (Draft)
+  	</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  	
+    
+  	<script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+    <script src="http://d3js.org/topojson.v1.min.js"></script>
+    <script src="http://d3js.org/queue.v1.min.js"></script>
+    <script src="underscore.min.js"></script>
+    <script src="moment.min.js"></script>
+    <script src="Chart.js"></script>
+    <script src="Chart.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="highcharts.js"></script>
+    <script src="http://code.highcharts.com/modules/exporting.js"></script>
+    <script src="http://cdn.datatables.net/1.10.1/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="http://cdn.datatables.net/1.10.1/css/jquery.dataTables.css"> 
+    <link rel="stylesheet" href="prisondata.css">
+    <script type="text/javascript" src="Circuit.json"></script>
+    <script type="text/javascript" src="Chatter.json"></script>
+    
+  </head>
+    <body>
+      Fewer black offenders sent to state prisons
+      The get-tough-on-crime movement of the 1980s and 1990s in Georgia was toughest on African-American men and women in Georgia. Today, 62 percent of inmates in state prisons are black, although African-Americans account for 31 percent of the state's population. With sentencing reforms and a fundamental shift in the drug culture, however, the numbers of black offenders sent to prison have begun a sharp decline.  
+
+      <div class="container">
+      <div id="container5" style="width: 800px; height: 400px; margin: 0 auto"></div>
+      <div id="container6" style="width: 800px; height: 400px; margin: 0 auto"></div>
+      
+      <table  id="example" class="chart-demo table table-striped table-bordered" cellspacing="0" >
+
+
+      <script type="text/javascript" src="TestLine.js"></script>
+      Drug arrests and prosecutions have shifted in Georgia -- from cocaine cases, which chiefly involve black defendants, to methamphetamine cases, which typically involve white defendants. Samples of suspected drugs are sent to the State Crime Lab for analysis. There, positive tests for meth exceeded positive tests for cocaine last year for the first time.
+      </div>
+     
+     <h1 class="title" style = "text-align:center" >Drug test results* vs. Georgia prison commitments</h1>
+
+      <div id="container3" style="width: 800px; height: 300px; margin: 0 auto"></div>
+      <div id="container4" style="width: 800px; height: 300px; margin: 0 auto"></div>
+      <script type="text/javascript" src="highchartpart2.js"></script>
+
+      <h3>Drug test results*:They are the number of evidence items that we tested that were positive for either drug.  It’s going to be pretty close to the number of reports we issued for each of those drugs each year. </h3>
+
+
+      
+
+
+      Georgia is divided into 49 judicial circuits. Rural circuits consist of multiple counties; urban circuits may consist of just one. State Corrections Department data show that "commitments" (sentences) to state prisons have been falling in most of the state's circuits, with steep declines  in Fulton, Cobb and Clayton in particular. One of the chief exceptions is Gwinnett, whose district attorney says he makes no apologies for locking up criminals.
+      <div class="container">
+           <h1 class="title">Statewide change (2009 - 2013): -15%</h1>
+           
+      <!-- Radar Chart -->
+        <div class="chart-demo" id="circuitmap">
+        
+        </div>
+      
+      <!-- Doughnut Chart -->
+        <div  class="chart-demo1" id = "highchart" style="width: 600px; height: 450px; margin: 0px ">
+          <h2 id = "results" class="title"></h2>
+          
+          
+        </div>
+
+        <div class="chart-demo1" id="circuitchart" width="600" height="300" margin-top = "100">
+          <h2 class="title" id="headline">Georgia</h2>
+          <span id="chatter"></span>
+        </div>
+
+
+        
+          
+          
+        
+        
+
+     <script type="text/javascript" src="JudicialCircuit.js"></script>
+     <script type="text/javascript" src="highchart.js"></script>
+
+     </div>
+
+
+
+
+     
+    
+    </body>
+    
+  	
+
+
+
+
+</html>

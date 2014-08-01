@@ -1,0 +1,128 @@
+.container {
+  width: 1300px;
+  margin: 0 auto;
+  overflow: auto;
+
+  .title {
+    text-align: center;
+    color: #FFA500;
+  }
+
+  .title__link {
+    display: inline-block;
+    color: white;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.lengend{
+  font-size: 12px;
+}
+
+.chart-demo {
+  float: left;
+  width: 650px;
+}
+.chart-demo1 {
+  float: right;
+  width: 600px;
+}
+
+.circuits {
+    fill:lightgray;
+    stroke: none;
+    cursor: pointer;
+
+}
+
+.circuits:hover {
+  fill: orangered；
+  cursor: pointer;
+    
+}
+
+
+.q0-9 { fill:rgb(33,102,172);  }
+.q1-9 { fill:rgb(103,169,207); }
+.q2-9 { fill:rgb(209,229,240); }
+.q3-9 { fill:rgb(255,247,188); }
+.q4-9 { fill:rgb(254,196,79);  }
+.q5-9 { fill:rgb(217,95,14); }
+
+
+
+.subunit-boundary {
+  fill: none;
+  stroke: black;
+  stroke-width: 2;
+
+}
+
+.county-boundary{
+  fill:none;
+  stroke: white;
+  stroke-width: 1;
+}
+
+.info.header {
+    font-size:2em;
+}
+
+.info.years {
+    font-size:2.5em;
+}
+
+
+
+.place,
+.place-label {
+  fill: #444;
+}
+
+.text {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  pointer-events: none;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+.y.axis line, .y.axis path {
+  fill: none;
+  stroke: #000;
+}
+
+
+canvas{
+  width: 650px;
+  height: 800px;
+
+}
+div.dataTables_wrapper {
+      margin-top: 3em;    
+      margin-bottom: 3em;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      
+}
+
+   
